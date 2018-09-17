@@ -15,7 +15,7 @@ Lambda expressions là một tính năng mới quan trọng trong Java 8. Lambda
 
 Functional interfaces là interface chỉ có 1 method. Lambda expressions cung cấp cách thức mới làm việc với Collection một cách đơn giản và hiệu quả, tăng hiệu năng (performance) của hệ thống chạy trong môi trường đa lõi (multicore).
 
-### Cấu trúc của lambda expressions
+### 1.1. Cấu trúc của lambda expressions
 
 | Tên phiên bản       | Arrow tocken | Body |
 | ------------------- | ---------- | ---------- |
@@ -57,7 +57,7 @@ listDevs.sort((Developer o1, Developer o2) -> o1.getAge() - o2.getAge());
 listDevs.sort((o1, o2) -> o1.getAge() - o2.getAge());
 ```
 
-### Duyệt collection
+### 1.2. Duyệt collection
 
 Cách thông thường khởi tạo và in ra danh sách:
 ```Java
@@ -80,3 +80,37 @@ Sử dụng tham chiếu
 List<Integer> list = Arrays.asList(1, 2, 3, 4, 5, 6, 7);
 list.forEach(System.out::println);
 ```
+
+### 1.3. forEach examples
+
+### forEach and Map
+
+Normal way to loop a Map.
+```Java
+Map<String, Integer> items = new HashMap<>();
+    items.put("A", 10);
+    items.put("B", 20);
+    items.put("C", 30);
+    items.put("D", 40);
+    items.put("E", 50);
+    items.put("F", 60);
+
+    for (Map.Entry<String, Integer> entry : items.entrySet()) {
+	System.out.println("Item : " + entry.getKey() + " Count : " + entry.getValue());
+    }
+```
+
+In Java 8, you can loop a `Map` with `forEach` + lambda expression.
+```Java
+Map<String, Integer> items = new HashMap<>();
+    items.put("A", 10);
+    items.put("B", 20);
+    items.put("C", 30);
+    items.put("D", 40);
+    items.put("E", 50);
+    items.put("F", 60);
+
+    items.forEach((k, v) -> System.out.println("Item : " + k + " Count : " + v));
+```
+
+#### forEach and List
