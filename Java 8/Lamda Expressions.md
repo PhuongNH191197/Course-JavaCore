@@ -24,18 +24,18 @@ Functional interfaces là interface chỉ có 1 method. Lambda expressions cung 
 () -> System.out.println("Hello World");
 
 // một tham số
-(a) -> return a+a;
+(a) -> return a + a;
 
 // một tham số với kiểu dữ liệu
 (String s) -> { System.out.println(s); }
 
 // hai tham số
-(int a, int b) -> return a+b;
+(int a, int b) -> return a + b;
 ```
 - Tham số của có thể được định nghĩa kiểu một cách tường minh hoặc không cần định nghĩa kiểu. Kiểu sẽ được suy ra từ ngữ cảnh cụ thể.
 - Các tham số được đặc trong hai dấu đóng mở đơn `(params)`, khi chỉ có một tham số thì có thể không cần đặt trong dấu đóng mở. 
 ```Java
-a -> return a+a;
+a -> return a + a;
 ```
 - Body code của LamExp được đặt trong dấu đóng mở nhọn `{body}`, khi body code chỉ có một sử lý (thể hiện) thì không cần có dấu đóng mở nhọn.
 
