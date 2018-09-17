@@ -1,6 +1,6 @@
 ## Java 8
 
-| No | Tên phiên bản            | Ngày release |
+| No | Tên phiên bản &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | Ngày release |
 | -- | ------------------------ | ------------ |
 | 1  | Java SE 8                |  2014-03-18  |
 | 2  | Java SE 8 Update 5       |  2014-04-15  |
