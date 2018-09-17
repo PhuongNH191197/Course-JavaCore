@@ -23,8 +23,13 @@ Functional interfaces là interface chỉ có 1 method. Lambda expressions cung 
 
 - LamExp có thể không có, có một, hoặc nhiều tham số. 
 ```Java
+// không tham số
 () -> "Hello"; 
+
+// một tham số
 (a) -> return a+a;
+
+// hai tham số
 (int a, int b) -> return a+b;
 ```
 - Tham số của có thể được định nghĩa kiểu một cách tường minh hoặc không cần định nghĩa kiểu. Kiểu sẽ được suy ra từ ngữ cảnh cụ thể.
