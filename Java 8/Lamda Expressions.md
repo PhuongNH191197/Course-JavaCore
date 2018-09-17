@@ -39,7 +39,7 @@ a -> return a+a;
 ```
 - Body code của LamExp được đặt trong dấu đóng mở nhọn `{body}`, khi body code chỉ có một sử lý (thể hiện) thì không cần có dấu đóng mở nhọn.
 
-### Cú pháp Lambda trong Java cho phép tự suy luận kiểu dữ liệu. Hãy xem xét các ví dụ có sẵn sau đây:
+#### `Cú pháp Lambda trong Java cho phép tự suy luận kiểu dữ liệu`. Hãy xem xét các ví dụ có sẵn sau đây:
 
 ```Java
 //sort by age
