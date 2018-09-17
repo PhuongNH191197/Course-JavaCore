@@ -12,7 +12,7 @@ Stream<T> filter(Predicate<? super T> predicate);
 
 Stream tôi sẽ đề cập sau, đối với doanh nghiệp cho phép giả định cho họ 1 cơ chế để tạo ta một chuỗi các tiêu chí hỗ trợ các hoạt động tổng hợp dữ liệu tuần tự và song song, có thể thu nhập dữ liệu trong Stream chỉ bằng 1 lệnh. Vì vậy về cơ bản chúng ta có thể sử dụng Stream và Predicate để lọc ra các yếu tố nhất định từ một nhóm và sau đó thực hiện một số hoạt động trên đó. Chúng ta hãy xem ví dụ bên dưới.
 
-### Hướng Dẫn Sử Dụng Predicate Trong Java 8
+## Hướng Dẫn Sử Dụng Predicate Trong Java 8
 
 ### 1. Chúng ta có một lớp nhân viên như sau:
 ```Java
@@ -137,3 +137,55 @@ Tóm lại về Predicate trong java 8:
 - Di chuyển điều kiện của bạn đến một địa điểm trung tâm (class)
 - Nó cải thiện khả năng quản lý code
 - Code dễ đọc hơn rất nhiều khi viết một khối if-else
+
+### More Example:
+
+Thêm một ví dụ ta sử dụng interface Predicate để in các phần tử trong danh sách trên theo những tiêu chí khác nhau.
+
+```Java
+import java.util.Arrays;
+import java.util.List;
+import java.util.function.Predicate;
+
+public class Main {
+
+	public static void main(String [] a)  {
+		List<Integer> list = Arrays.asList(1, 2, 3, 4, 5, 6, 7);
+
+		System.out.print("Print all numbers: ");
+		evaluate(list, (n)->true); // test(n) luôn return true
+
+		System.out.print("Print no numbers: ");
+		evaluate(list, (n)->false); // test(n) luôn return false
+
+		System.out.print("Print even numbers: ");
+		evaluate(list, (n)-> n%2 == 0 ); // test(n) return true nếu n chẵn
+
+		System.out.print("Print odd numbers: ");
+		evaluate(list, (n)-> n%2 == 1 ); // test(n) return true nếu n  lẻ
+
+		System.out.print("Print numbers greater than 5: ");
+		evaluate(list, (n)-> n > 5 ); // test(n) return true nếu n > 5
+	}
+
+	public static void evaluate(List<Integer> list, Predicate<Integer> predicate) {
+		for(Integer n: list)  {
+			if(predicate.test(n)) {
+				System.out.print(n + " ");
+			}
+		}
+	}
+}
+```
+#### Output:
+
+> Print all numbers: 1 2 3 4 5 6 7
+
+> Print no numbers:
+
+> Print even numbers: 2 4 6
+
+> Print odd numbers: 1 3 5 7
+
+> Print numbers greater than 5: 6 7
+
