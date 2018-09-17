@@ -17,17 +17,26 @@ Functional interfaces là interface chỉ có 1 method. Lambda expressions cung 
 
 ### 1.1. Cấu trúc của lambda expressions
 
-| Tên phiên bản       | Arrow tocken | Body |
-| ------------------- | ---------- | ---------- |
-| `([Data type] [param1], [param2], [param_n])` | `->` | `{body};` |
+| Tên phiên bản | Arrow tocken | Body |
+| --------------| ------------ | ---- |
+| `(argument)`  | `->` | `{body};` |
+
+```Java
+(arg1, arg2...) -> { body }
+
+(type1 arg1, type2 arg2...) -> { body }
+```
 
 - LamExp có thể không có, có một, hoặc nhiều tham số. 
 ```Java
 // không tham số
-() -> "Hello"; 
+() -> System.out.println("Hello World");
 
 // một tham số
 (a) -> return a+a;
+
+// một tham số với kiểu dữ liệu
+(String s) -> { System.out.println(s); }
 
 // hai tham số
 (int a, int b) -> return a+b;
