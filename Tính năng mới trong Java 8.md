@@ -1,12 +1,12 @@
 ## Java 8
 
-| Tên phiên bản       ||
-| ------------------- | ---------- |
-| Java SE 8           | 2014-03-18 |
-| Java SE 8 Update 5  | 2014-04-15 |
-| Java SE 8 Update 11 | 2014-07-15 |
-| Java SE 8 Update 20 | 2014-08-19 |
-| Java SE 8 Update 25 | 2014-10-14 |
+| No | Tên phiên bản            | Ngày release |
+| -- | ------------------------ | ------------ |
+| 1  | Java SE 8                |  2014-03-18  |
+| 2  | Java SE 8 Update 5       |  2014-04-15  |
+| 3  | Java SE 8 Update 11      |  2014-07-15  |
+| 4  | Java SE 8 Update 20      |  2014-08-19  |
+| 5  | Java SE 8 Update 25      |  2014-10-14  |
 
 ## 1. Lamda Expressions
 Tính năng đầu tiên, đồng thời là tính năng nổi bật nhất của Java8: hỗ trợ cú pháp Lambda,  đây dường như là cải tiến lớn nhất trong cú pháp lập trình Java kể từ thời điểm phát hành Generics  và Annotations trong Java 5.
