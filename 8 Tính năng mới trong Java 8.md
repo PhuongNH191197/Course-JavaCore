@@ -23,8 +23,8 @@ Collections.sort(listDevs, new Comparator<Developer>() {
 });
 
 //lambda
-listDevs.sort((Developer o1, Developer o2)->o1.getAge()-o2.getAge());
+listDevs.sort((Developer o1, Developer o2) -> o1.getAge() - o2.getAge());
 
 //lambda, valid, parameter type is optional
-listDevs.sort((o1, o2)->o1.getAge()-o2.getAge());
+listDevs.sort((o1, o2) -> o1.getAge() - o2.getAge());
 ```
