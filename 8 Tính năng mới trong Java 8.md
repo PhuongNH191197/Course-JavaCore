@@ -74,3 +74,9 @@ Sử dụng LamExp
 List<Integer> list = Arrays.asList(1, 2, 3, 4, 5, 6, 7);
 list.forEach(n -> System.out.println(n));
 ```
+
+Sử dụng tham chiếu
+```Java
+List<Integer> list = Arrays.asList(1, 2, 3, 4, 5, 6, 7);
+list.forEach(System.out::println);
+```
