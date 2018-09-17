@@ -44,10 +44,10 @@ Cú pháp Lambda trong Java cho phép tự suy luận kiểu dữ liệu. Hãy x
 ```Java
 //sort by age
 Collections.sort(listDevs, new Comparator<Developer>() {
-	@Override
-	public int compare(Developer o1, Developer o2) {
-		return o1.getAge() - o2.getAge();
-	}
+    @Override
+    public int compare(Developer o1, Developer o2) {
+	return o1.getAge() - o2.getAge();
+    }
 });
 
 //lambda
@@ -55,4 +55,22 @@ listDevs.sort((Developer o1, Developer o2) -> o1.getAge() - o2.getAge());
 
 //lambda, valid, parameter type is optional
 listDevs.sort((o1, o2) -> o1.getAge() - o2.getAge());
+```
+
+### Duyệt collection
+
+Cách thông thường khởi tạo và in ra danh sách:
+```Java
+//Khai báo và khởi tạo list các phần tử Integer.
+List<Integer> list = Arrays.asList(1, 2, 3, 4, 5, 6, 7);
+//Duyệt và in ra console từng phần tử của danh sách.
+for(Integer n: list) {
+    System.out.println(n);
+}
+```
+
+Sử dụng LamExp
+```Java
+List<Integer> list = Arrays.asList(1, 2, 3, 4, 5, 6, 7);
+list.forEach(n -> System.out.println(n));
 ```
