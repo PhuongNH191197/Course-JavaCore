@@ -17,7 +17,7 @@ Functional interfaces là interface chỉ có 1 method. Lambda expressions cung 
 
 ### 1.1. Cấu trúc của lambda expressions
 
-| Tên phiên bản | Arrow tocken | Body |
+| Params        | Arrow tocken | Body |
 | --------------| ------------ | ---- |
 | `(argument)`  | `->` | `{body};` |
 
