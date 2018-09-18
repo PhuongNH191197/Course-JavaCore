@@ -17,7 +17,7 @@ Stream là một đối tượng mới của Java được giới thiệu từ p
 - Chúng ta không thể dùng index để access các element trong Stream.
 - Stream hỗ trợ thao tác song song các element trong collection hay array.
 
-### *Các loại toán tử của Stream*
+#### *Các loại toán tử của Stream*
 > Intermediate operation: toán tử trung gian trả về stream mới, chúng luôn là lazy. Ví dụ khi thực hiện filter(), nó không thực hiện việc lọc ngay lập tức mà nó tạo ra 1 stream mới. Cái mà khi được duyệt(thực thi) sẽ chứa các phần tử hợp lệ của stream ban đầu. Lưu ý Stream được tạo từ toán tử intermediate sẽ không bắt đầu duyệt cho đến khi có 1 toán tử terminal thực hiện.
 
 > Terminal operation: toán tử đầu cuối, sẽ duyệt(thực thi) 1 stream để trả về 1 kết quả. Sau khi toán tử terminal được thực hiện, stream sẽ được xét như là đã được tiêu thụ, dùng (consumed), không còn được sử dụng nữa. Trong trường hợp bạn vẫn muốn duyệt cùng kiểu tập hợp dữ liệu đó, bạn cần phải quay lại data source và tạo ra stream mới.
