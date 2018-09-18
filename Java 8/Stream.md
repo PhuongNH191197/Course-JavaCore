@@ -34,30 +34,30 @@ Stream là một đối tượng mới của Java được giới thiệu từ p
 ### Tạo Stream từ List
 
 ```java
-    List<String> items = new ArrayList<String>();
-    items.add("one");
-    items.add("two");
-    items.add("three");
-    items.add("fore");
-    items.add("five");
+List<String> items = new ArrayList<String>();
+items.add("one");
+items.add("two");
+items.add("three");
+items.add("fore");
+items.add("five");
 
-    // thông qua stream()
-    Stream<String> stream = items.stream();
+// thông qua stream()
+Stream<String> stream = items.stream();
 
-    // thông qua parallelStream()
-    Stream<String> stream = items.parallelStream();
+// thông qua parallelStream()
+Stream<String> stream = items.parallelStream();
 ```
 
 ### Tạo Stream từ Object Arrays
 
 ```java
-    String[] array = {"a", "b", "c", "d", "e"};
+String[] array = {"a", "b", "c", "d", "e"};
 
-    // Arrays.stream
-    Stream<String> stream1 = Arrays.stream(array);
-    stream1.forEach(System.out::println);
+// Arrays.stream
+Stream<String> stream1 = Arrays.stream(array);
+stream1.forEach(System.out::println);
 
-    // Stream.of
-    Stream<String> stream2 = Stream.of(array);
-    stream2.forEach(System.out::println);
+// Stream.of
+Stream<String> stream2 = Stream.of(array);
+stream2.forEach(System.out::println);
 ```
