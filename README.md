@@ -1,1 +1,3 @@
-## Tổng hợp những cái hay - mới của Java 8 - 9 - 10
+## References
+
+- [What's New in JDK 8](http://www.oracle.com/technetwork/java/javase/8-whats-new-2157071.html)
