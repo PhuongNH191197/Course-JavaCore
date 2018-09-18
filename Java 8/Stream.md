@@ -8,9 +8,7 @@ Stream là một đối tượng mới của Java được giới thiệu từ p
 
 - `Không lưu trữ`: Stream không phải là 1 kiểu câu trúc dữ liệu để chứa các đối tượng, thành phần. Stream truyền tải các thành phần từ các nguồn (source) như 1 cấu trúc dữ liệu, một mảng nào đó
 - `Không chỉnh sửa`: Một toán tử thực hiện trên một stream tạo ra 1 kết quả nào đó nhưng nó không sửa nguồn của nó.
-- `Lazy seek`: Nhiều toán tử thao tác trên stream như filter, map thực hiện theo cơ chế lazy. Các toán tử của stream chia làm 2 loại intermediate và terminal Intermediate operation luôn luôn là lazy. Chi tiết về các loại toán tử sẽ được đề cập ở phần bên dưới.
-> Intermediate operation: toán tử trung gian trả về stream mới, chúng luôn là lazy. Ví dụ khi thực hiện filter(), nó không thực hiện việc > lọc ngay lập tức mà nó tạo ra 1 stream mới. Cái mà khi được duyệt(thực thi) sẽ chứa các phần tử hợp lệ của stream ban đầu. Lưu ý Stream > được tạo từ toán tử intermediate sẽ không bắt đầu duyệt cho đến khi có 1 toán tử terminal thực hiện
-
+- `Lazy seek`: Nhiều toán tử thao tác trên stream như filter, map thực hiện theo cơ chế lazy. Các toán tử của stream chia làm 2 loại intermediate và terminal Intermediate operation luôn luôn là lazy. Chi tiết về các loại toán tử sẽ được đề cập ở phần bên dưới.(*)
 - `Có thể không bị chặn`: Collection có kích thước giới hạn, stream thì không. Các toán tử limit() và findFirst() có thể cho phép tính toán trên các stream vô hạn trong thời gian giới hạn
 - `Tiêu hao (Consumable)`: Các thành phần của một stream chỉ được duyệt 1 lần trong vòng đời của 1 stream. Để duyệt lại các đối tượng thì stream cần được sinh lại.
 - Stream hỗ trợ hoàn hảo cho Lambda Expression.
