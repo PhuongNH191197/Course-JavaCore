@@ -50,6 +50,9 @@ Stream<String> stream = items.parallelStream();
 
 ### Tạo Stream từ Object Arrays
 
+In Java 8, you can either use Arrays.stream or Stream.of to convert an Array into a Stream.
+
+*For object arrays, both `Arrays.stream` and `Stream.of` returns the same output.*
 ```java
 String[] array = {"a", "b", "c", "d", "e"};
 
@@ -61,3 +64,36 @@ stream1.forEach(System.out::println);
 Stream<String> stream2 = Stream.of(array);
 stream2.forEach(System.out::println);
 ```
+Review the JDK source code.
+
+#### *Arrays.java*
+```java
+/**
+ * Returns a sequential {@link Stream} with the specified array as its
+ * source.
+ *
+ * @param <T> The type of the array elements
+ * @param array The array, assumed to be unmodified during use
+ * @return a {@code Stream} for the array
+ * @since 1.8
+ */
+public static <T> Stream<T> stream(T[] array) {
+    return stream(array, 0, array.length);
+}
+```
+#### *Stream.java*
+```java
+/**
+ * Returns a sequential ordered stream whose elements are the specified values.
+ *
+ * @param <T> the type of stream elements
+ * @param values the elements of the new stream
+ * @return the new stream
+ */
+@SafeVarargs
+@SuppressWarnings("varargs") // Creating a stream from an array is safe
+public static<T> Stream<T> of(T... values) {
+    return Arrays.stream(values);
+}
+```
+> Note: For object arrays, the `Stream.of` method is calling the `Arrays.stream` internally.
