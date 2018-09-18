@@ -66,7 +66,7 @@ Stream<String> stream = items.parallelStream();
 
 In Java 8, you can either use `Arrays.stream` or `Stream.of` to convert an `Array` into a `Stream`.
 
-### 2.2.1. Object Arrays
+### Object Arrays
 *For object arrays, both `Arrays.stream` and `Stream.of` returns the same output.*
 ```java
 String[] array = {"a", "b", "c", "d", "e"};
@@ -112,7 +112,7 @@ public static<T> Stream<T> of(T... values) {
 ```
 > Note: For object arrays, the `Stream.of` method is calling the `Arrays.stream` internally.
 
-### 2.2.2. Primitive Arrays
+### Primitive Arrays
 *For primitive array, the `Arrays.stream` and `Stream.of` will return different output.*
 ```java
 int[] intArray = {1, 2, 3, 4, 5};
