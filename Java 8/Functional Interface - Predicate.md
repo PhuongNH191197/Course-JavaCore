@@ -1,4 +1,4 @@
-## Predicate
+# Predicate
 
 Trong Java 8, Predicate là 1 interface do đó có thể sử dụng cho mục tiêu của lamba expression hoặc method reference. Bạn có thể sử dụng Predicate ở bất cứ nơi nào mà bạn cần đánh giá một điều kiện về nhóm hay bộ sưu tập các đối tượng tương tự như vậy mà đánh giá có thể dẫn đến đúng hoặc sai ví dụ:
 
