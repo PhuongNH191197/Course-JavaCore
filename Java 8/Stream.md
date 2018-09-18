@@ -1,15 +1,15 @@
 # Stream
 
-Stream là một đối tượng mới của Java được giới thiệu từ phiên bản Java 8, giúp cho việc thao tác trên collection và array trở nên dễ dàng và tối ưu hơn. Vậy nó là gì? Trong bài viết này, chúng ta hãy cùng tìm hiểu về Stream trong Java 
+Stream là một đối tượng mới của Java được giới thiệu từ phiên bản Java 8, giúp cho việc thao tác trên collection và array trở nên dễ dàng và tối ưu hơn. Vậy nó là gì? Trong bài viết này, chúng ta hãy cùng tìm hiểu về Stream trong Java.
 
 Định nghĩa đơn giản thì Stream là một wrapper của collection và array. Nó wrap một collection sẵn có và các data source khác để hỗ trợ việc thao tác trên các collection, datasource đó sử dụng Lambda Expression. Vì thế, bạn chỉ cần chỉ định cái bạn muốn làm, còn việc làm như thế nào, Stream sẽ lo cái đó.
 
 ## 1. Các đặc điểm của Stream:
 
-- `Không lưu trữ`: Stream không phải là 1 kiểu câu trúc dữ liệu để chứa các đối tượng, thành phần. Stream truyền tải các thành phần từ các nguồn (source) như 1 cấu trúc dữ liệu, một mảng nào đó
+- `Không lưu trữ`: Stream không phải là 1 kiểu câu trúc dữ liệu để chứa các đối tượng, thành phần. Stream truyền tải các thành phần từ các nguồn (source) như 1 cấu trúc dữ liệu, một mảng nào đó.
 - `Không chỉnh sửa`: Một toán tử thực hiện trên một stream tạo ra 1 kết quả nào đó nhưng nó không sửa nguồn của nó.
 - `Lazy seek`: Nhiều toán tử thao tác trên stream như filter, map thực hiện theo cơ chế lazy. Các toán tử của stream chia làm 2 loại intermediate và terminal Intermediate operation luôn luôn là lazy. Chi tiết về các loại toán tử sẽ được đề cập ở phần bên dưới.
-- `Có thể không bị chặn`: Collection có kích thước giới hạn, stream thì không. Các toán tử limit() và findFirst() có thể cho phép tính toán trên các stream vô hạn trong thời gian giới hạn
+- `Có thể không bị chặn`: Collection có kích thước giới hạn, stream thì không. Các toán tử limit() và findFirst() có thể cho phép tính toán trên các stream vô hạn trong thời gian giới hạn.
 - `Tiêu hao (Consumable)`: Các thành phần của một stream chỉ được duyệt 1 lần trong vòng đời của 1 stream. Để duyệt lại các đối tượng thì stream cần được sinh lại.
 - Stream hỗ trợ hoàn hảo cho Lambda Expression.
 - Stream không chứa các element của collection hay array.
@@ -26,15 +26,24 @@ Hãy liên hệ stream như hình ảnh sau: Data source: nguồn lấy dư
 
 Toán tử intermediate có thể chia làm 2 loại: `stateless` and `stateful` operation:
 - Toán tử `stateless` như `filter` và `map`: không giữ lại trạng thái của 1 phần tử trước đó khi đang xử lý (tương tác) 1 đối tượng mới
-- Toán tử `stateful` như `distinct` và `sorted`: có thể sử dụng trạng thái của đối tượng trước để xử lý (tương tác) đối tượng mới. Stateful thường đòi hỏi xử lý (duyệt) toàn bộ data source trước khi tạo ra kết quả. Lưu ý đặc điểm này khi so sánh stream với các kiểu lặp. Đặc điểm này cũng là yếu tố cần cân nhắc khi quyết định sử dụng đơn stream hay song song stream (luồng này chờ kết quả luồng kia)
+- Toán tử `stateful` như `distinct` và `sorted`: có thể sử dụng trạng thái của đối tượng trước để xử lý (tương tác) đối tượng mới. Stateful thường đòi hỏi xử lý (duyệt) toàn bộ data source trước khi tạo ra kết quả. Lưu ý đặc điểm này khi so sánh stream với các kiểu lặp. Đặc điểm này cũng là yếu tố cần cân nhắc khi quyết định sử dụng đơn stream hay song song stream (luồng này chờ kết quả luồng kia).
 
+#### *Parallelism:* 
+Xử lý các đối tượng với vòng lặp for là kiểu xử lý tuần tự. Stream tạo điều kiện thực hiện song song bằng cách sắp xếp lại các tính toán của các luồng khác nhau - luồng này có thể coi như là luồng thu thập tổng hợp Tất cả các toán tử của steam đều có thể thực hiện theo tuần tự hoặc song song. JVM thực thi stream theo tuần tự là mặc định trừ khi chỉ ra, khai báo chính xác là song song.
+
+Ví dụ 2 method của các class của Collection:
+- `Collection.stream()`: tạo ra stream tuần tự
+- `Collection.parallelStream()`: tạo ra các stream song song
+
+Để muốn xác định mode của stream thì sử dụng method `isParallel()`.
+Để thay đổi mode của stream sử dụng 2 method `sequential()` và `parallel()`.
 
 ## 2. Tạo Stream như thế nào?
 
 - Từ các class con của Collection thông qua phương thức `stream()` và `parallelStream()`.
-- Từ 1 mảng bằng cách sử dụng `Arrays.stream(Object[])`;
-- Từ các dòng của 1 file thông qua `BufferedReader.lines()`;
-- Hoặc từ các method của class Files
+- Từ 1 mảng bằng cách sử dụng `Arrays.stream(Object[])`.
+- Từ các dòng của 1 file thông qua `BufferedReader.lines()`.
+- Hoặc từ các method của class Files.
 
 ### 2.1. Tạo Stream từ các class con của Collection (List)
 
