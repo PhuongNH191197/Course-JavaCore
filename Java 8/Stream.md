@@ -31,15 +31,15 @@ Stream là một đối tượng mới của Java được giới thiệu từ p
 - Từ các dòng của 1 file thông qua `BufferedReader.lines()`;
 - Hoặc từ các method của class Files
 
-### Tạo Stream từ List
+### 2.1. Tạo Stream từ List
 
 ```java
 List<String> items = new ArrayList<String>();
-items.add("one");
-items.add("two");
-items.add("three");
-items.add("fore");
-items.add("five");
+    items.add("one");
+    items.add("two");
+    items.add("three");
+    items.add("fore");
+    items.add("five");
 
 // thông qua stream()
 Stream<String> stream = items.stream();
@@ -48,10 +48,11 @@ Stream<String> stream = items.stream();
 Stream<String> stream = items.parallelStream();
 ```
 
-### Tạo Stream từ Object Arrays
+### 2.2. Tạo Stream từ Arrays
 
 In Java 8, you can either use Arrays.stream or Stream.of to convert an Array into a Stream.
 
+### 2.2.1. Object Arrays
 *For object arrays, both `Arrays.stream` and `Stream.of` returns the same output.*
 ```java
 String[] array = {"a", "b", "c", "d", "e"};
@@ -65,7 +66,6 @@ Stream<String> stream2 = Stream.of(array);
 stream2.forEach(System.out::println);
 ```
 Review the JDK source code.
-
 #### *Arrays.java*
 ```java
 /**
@@ -97,3 +97,20 @@ public static<T> Stream<T> of(T... values) {
 }
 ```
 > Note: For object arrays, the `Stream.of` method is calling the `Arrays.stream` internally.
+
+### 2.2.2. Primitive Arrays
+*For primitive array, the Arrays.stream and Stream.of will return different output.*
+```java
+int[] intArray = {1, 2, 3, 4, 5};
+
+// 1. Arrays.stream -> IntStream 
+IntStream intStream1 = Arrays.stream(intArray);
+intStream1.forEach(x -> System.out.println(x));
+
+// 2. Stream.of -> Stream<int[]>
+Stream<int[]> temp = Stream.of(intArray);
+
+// Cant print Stream<int[]> directly, convert / flat it to IntStream 
+IntStream intStream2 = temp.flatMapToInt(x -> Arrays.stream(x));
+intStream2.forEach(x -> System.out.println(x));
+```
