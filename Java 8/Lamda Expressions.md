@@ -22,6 +22,7 @@ Functional interfaces là interface chỉ có 1 method. Lambda expressions cung 
 - Tham số của có thể được định nghĩa kiểu một cách tường minh hoặc không cần định nghĩa kiểu. Kiểu sẽ được suy ra từ ngữ cảnh cụ thể.
 - Các tham số được đặc trong hai dấu đóng mở đơn `(params)`, khi chỉ có một tham số thì có thể không cần đặt trong dấu đóng mở. 
 - Body code của LamExp được đặt trong dấu đóng mở nhọn `{body}`, khi body code chỉ có một sử lý (thể hiện) thì không cần có dấu đóng mở nhọn.
+
 *Ví dụ:*
 ```Java
 // không tham số
