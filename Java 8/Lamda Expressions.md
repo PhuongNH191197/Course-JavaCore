@@ -64,6 +64,7 @@ Cách thông thường khởi tạo và in ra danh sách:
 ```Java
 //Khai báo và khởi tạo list các phần tử Integer.
 List<Integer> list = Arrays.asList(1, 2, 3, 4, 5, 6, 7);
+
 //Duyệt và in ra console từng phần tử của danh sách.
 for(Integer n: list) {
     System.out.println(n);
