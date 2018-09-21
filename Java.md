@@ -28,3 +28,49 @@
 - Giải phương trình bậc 2 trong Java
 - Thực hành tạo câu hỏi trắc nghiệm Java
 - Sắp xếp và tìm kiếm với mảng trong java
+
+### 2. Giới thiệu về Class và đối tượng
+- Class và Object trong Java
+- Biến và Hàm Instance (Object) trong Java
+- Constructor Java
+- Biến và Hàm Class hay Static
+- Các loại biến và Hàm trong Java
+- Quản lý truy cập và bảo mật trong Java
+- Bộ nhớ Stack và Heap trong Java
+- Tạo mảng của đối tượng trong Java
+- Sự khác nhau giữa giá trị null và 0 trong Java
+- Kế thừa trong Java
+- Quản lý truy cập và kế thừa trong Java
+- Từ khóa super và this
+- Phương thức Override và Overload method trong Java
+- Thực hành tạo danh sách nhân viên
+- Thực hành tính lương nhân viên
+- Thực hành tính lương nhân viên
+- Đa hình trong Java
+- Class Object trong Java
+- Ép kiểu đối tượng trong Java
+- Đóng gói trong java
+- Abstract Class trong Java
+- Phương thức abstract trong Java
+- Interface trong java
+- Kế thừa Interface trong Java
+- Wrapper Class và Autoboxing
+- Các hàm toán học trong Java
+- Ngày và Giờ trong Java
+
+### 3. Ngoại lệ, quản lý và bắt ngoại lệ
+- Giới thiệu về ngoại lệ, quản lý và bắt ngoại lệ trong Java
+- Anonymous Inner Class
+- Exception Ngoại lệ trong Java
+- try catch bắt lỗi exception trọng Java
+- Finally trong Exception
+- throw/throws một exception trong Java
+- Cách tạo một exceptions theo ý muốn
+- Cách tạo enum trong Java
+- Thread – đa luồng trong Java
+- Vòng đời của Thread trong Java
+- Synchronization Đồng bộ hoá Thread
+- Deadlock Thread trong Java
+- Đọc và Ghi File trong Java
+- Tạo thư mục và đọc ghi file
+- Tạo JAR file trong Java
