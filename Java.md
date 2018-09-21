@@ -1,0 +1,30 @@
+### 1. Định nghĩa Java cơ bản
+- Lập Trình Hướng Đối Tượng OOP
+- Giới Thiệu ngôn ngữ lập trình Java
+- Cài đặt môi trường Java co hệ điều hành windows
+- Thiết lập java Classpath cho windows
+- Tạo Project Java hello world trong Eclipse
+- Cấu trúc và Quy chuẩn Java Cơ bản
+- Các kiểu dữ liệu cơ bản trong Java
+- Toán Tử Cơ Bản Toán Học và Phép Gán trong Java
+- Cách Tạo Hàm và Sử dụng trong Java
+- Chuỗi trong Java
+- Hằng Số Trong Java
+- Tính Chu Vi và Diện Tích Các Hình trong java
+- Package và Import trong Java
+- Nhập Giá Trị Vào Từ Bàn Phím
+- Câu điều kiện if và toán tử so sánh
+- Câu điều kiện if else lồng nhau
+- Câu điều kiện switch
+- Toán từ điều kiện ? : trong Java
+- Mảng trong Java
+- Vòng lặp while
+- Vòng lặp do while
+- Vòng lặp for trong Java
+- Vòng lặp for each (for enhanced) trong Java
+- Câu lệnh break trong java
+- Câu lệnh continue trong java
+- Phép toán i++ và ++i trong Java
+- Giải phương trình bậc 2 trong Java
+- Thực hành tạo câu hỏi trắc nghiệm Java
+- Sắp xếp và tìm kiếm với mảng trong java
