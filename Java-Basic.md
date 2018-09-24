@@ -2,8 +2,8 @@
 - Lập Trình Hướng Đối Tượng OOP
 - Giới Thiệu ngôn ngữ lập trình Java
 - Cài đặt môi trường Java cho hệ điều hành windows
-- Tạo Project Java hello world
-- Cấu trúc và Quy chuẩn Java Cơ bản
+- Tạo Project Java đầu tiên
+- Cấu trúc và Quy chuẩn coding Java Cơ bản
 - Các kiểu dữ liệu cơ bản trong Java
 - Toán Tử Cơ Bản Toán Học và Phép Gán trong Java
 - Cách Tạo Hàm và Sử dụng trong Java
