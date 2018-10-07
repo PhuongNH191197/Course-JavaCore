@@ -16,16 +16,13 @@ try {
     while ((sCurrentLine = br.readLine()) != null) {
         System.out.println(sCurrentLine);
     }
-}
-catch (IOException e) {
+} catch (IOException e) {
     e.printStackTrace();
-}
-finally {
+} finally {
     try {
         if (br != null)
             br.close();
-    }
-    catch (IOException ex) {
+    } catch (IOException ex) {
         ex.printStackTrace();
     }
 }
