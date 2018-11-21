@@ -1,5 +1,25 @@
 # jUnit Test
 
+## JUnit là gì?
+
+JUnit là một framework đơn giản dùng cho việc tạo các unit testing tự động, và chạy các test có thể lặp đi lặp lại. JUnit là một framework được dùng cho unit test trong Java.
+
+Trong JUnit có các Test Case là các lớp của Java, các lớp này bao gồm một hay nhiều các phương thức cần kiểm tra, và Test Case này lại được nhóm với nhau để tạo thành Test Suite. Mỗi phương thức thử trong JUnit phải được thực thi nhanh chóng.
+
+## Annotation trong JUnit
+
+| Annotation          | Ý nghĩa           |
+| ------------------- | ----------------- |
+| `@RunWith`          | Xác định **test runner**      |
+| `@Suite`            | Thực thi nhiều **test case** cùng một lúc |
+| `@Before`           | Method sẻ được thực thi **trước** mỗi method **test**. `public void` |
+| `@BeforeClass`      | Method sẻ chỉ **chạy 1 lần** và **trước** tất cả method của class. `public static void` |
+| `@After`            | Method sẽ được thực thi **sau** mỗi phương thức test. `public void` |
+| `@AfterClass`       | Method sẻ chỉ **chạy 1 lần** và **sau** tất cả method của class. `public static void` |
+| `@Test`             | Đánh dấu một method dùng để **test**. |
+| `@Test(expected = ArithmeticException.class)` | Bắt ngoại lệ cho method **test**. |
+| `@Test(timeout=time)` | Xác định thời gian thực thi cho method **test**. |
+
 ## Các phương thức Assert()
 
 Các phương thức assertXXX() được dùng để kiểm tra các điều kiện khác nhau.junit.framework.TestCase, lớp cha cho tất cả các test case, thừa kế từ lớp junit.framework.Assert. Lớp này định nghĩa khá nhiều các phương thức assertXXX(). Các phương thức test hoạt động bằng cách gọi những phương thức này.
