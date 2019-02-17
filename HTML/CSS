@@ -1,0 +1,95 @@
+Bài 1 : Định Nghĩa
+1. HTML là gì?
+  - HTML là chữ viết tắt của HyperText Markup Language, có nghĩa là ngôn ngữ đánh dấu siêu văn bản. 
+  - HTML là một định dạng đặc biệc của XML nên nó sẽ có thẻ mở và thẻ đóng với cú pháp như sau: <tagname></tagname>
+  Ngoài ra mỗi thẻ HTML còn có một số thuộc tính riêng và danh sách các thuộc tính sẽ nằm bên trong thẻ mở như sau:
+   <tagname pro1="value1" prop2="value2"></tagname>
+2. Bổ cục HTML của một trang web 
+  - Bố cục cơ bản gồm : 
+        <!DOCTYPE html>
+    <html>
+        <head>
+            <title>Page Title</title>
+        </head>
+        <body>
+            <h1>My First Heading</h1>
+            <p>My first paragraph.</p>
+        </body>
+    </html>
+Trong đó:
+
+ + <!DOCTYPE html> là phần khai báo kiểu dữ liệu hiển thị là html để trình duyệt (Browser) biết.
+ + <html> và </html> là cặp thẻ nằm ngoài cùng và nó có nhiệm vụ là bao hết nội dung của trang web lại. Thẻ này là bát buộc.
+ + <head> và </head> là phần khai báo thông tin của trang web
+ + <title> và </title> nằm bên trong thẻ <head> và đây chính là khai báo tiêu đề cho trang web.
+ + <body> và </body> là thành phần quan trọng nhất, nó chứa nhưng đoạn mã HTML dùng để hiển thị trên website
+ + Các thẻ còn lại nằm trong thẻ <body> chính là các thẻ định dạng dữ liệu.
+ 
+ - Như vậy trong một website chúng ta chia làm 2 phần chính:
+    Phần 1: Là nhũng khai báo thông tin cho trang web và ta đặt nó trong thẻ head.
+    Phần 2: Là phần hiển thị định dạng nội dung của trang web và ta đặt trong thẻ body.
+3. Các vị trí thường thấy trong giao diện website
+  - Thông thường giao diện của một trang web sẽ được chia thành các phần như sau:
+      + Header (cố định)
+      + Footer (cố định)
+      + Menu (cố định)
+      + Sidebar (cố định)
+      + Main Content (Mỗi trang khác nhau)
+4. Sử dụng gì để code HTML
+  - HTML cũng chỉ là một file bình thường nên mọi editor đọc text đều có thể sư dụng để code như notepad, noted++, netbeans, sublime text, ...
+  
+ =============================================================================================================================== 
+Bài 02: HTML Elements và Attributes
+
+1. HTML Elements (thẻ HTML)
+   - Mỗi thẻ sẽ có thẻ mở (opentag) và thẻ đóng (closetag). Ví dụ với thẻ div thì mình sẽ viết như sau: 
+	"<div>Nội dung bên trong</div>"
+   - Cũng có một só thẻ sẽ khuyết thẻ đóng, loại này ta gọi là quick closetag, nghĩa là nó chỉ tồn tại thẻ mở thì ta sẽ viết như sau:
+	"<tagname/>"
+	Ví dụ: Các thẻ input, meta, link
+		<input />
+		<link />
+		<meta />
+   - Thẻ lồng trong thẻ
+	Các thẻ HTML sẽ được lồng với nhau để tạo thành một bổ cục vững chắc, lúc này thẻ con sẽ nằm trọn trong thẻ cha.
+	Ví dụ:
+	<div>
+	    <input type="text" classname="Class Name" value=""/>
+	</div>
+2. HTML Attributes (thuộc tính của thẻ html)
+   - Mỗi thẻ HTML ta có thể ví như một đối tượng, lúc này đối tượng HTML sẽ có các thuộc tính mô tả cho nó. Ví dụ thẻ input thì nó có các thuộc tính như sau:
+   	<input type="text" name="inputname" id="inputid" value=""/>
+   - Dấu nháy đơn và nháy kép
+Vấn đề này những bạn mới học dễ gặp lỗi này nhất. Mỗi thuộc tính trong HTML sẽ có cấu tạo name="value" hoặc name='value'. Nếu sử dụng dấu nháy đơn ' thì giá trị không được xuất hiện dấu nháy đơn và ngược lại, nếu sử dụng dấu nháy kép " thì giá trị không được xuất hiện dấu nháy kép.
+	<input type="text" name="inputname" id="inputid" value="Hello 'freetuts.net'"/>
+ Thuộc tính mở rộng : 
+ 	Mỗi thẻ HTML chỉ chấp nhận một số thuộc tính nhất định của riêng nó, nhưng nếu bạn muốn định nghĩa thêm một thuộc tính khác thì hoàn toàn được. Tuy nhiên trình duyệt sẽ không hiểu các thuộc tính đó nên sẽ không có tác dụng gì, vì vậy thông thường ta kết hợp thuộc tính tự định nghĩa với Javascript đẻ xử lý cho từng bài toán ( sẽ học sau).
+	Ví dụ: Trong thẻ input không có thuộc tính classname nhưng ta cũng có thể thêm vào được, tuy nhiên lúc chạy lên sẽ không có tác dụng gì.
+    <input type="text" classname="Class Name" value=""/>
+
+
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
